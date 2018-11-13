@@ -84,22 +84,21 @@ gulp.task("html", function(){
 	]))
 	.pipe(removeHtmlComm())
 	.pipe(gulp.dest("build"))
+	.pipe(rename("maintenance.html"))
+	.pipe(gulp.dest("build"))
 		.on("change", broSync.reload);
 });
 
 // собираем все файлы js в один и минифицируем
 gulp.task('vendor', function() {
     // return gulp.src('source/js/*.js')
-	return gulp.src(['source/js/test.js', 'source/js/main.js'])
+	return gulp.src(['source/js/main.js', 'source/js/fade-in-page.js'])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('build/js'))
         .pipe(uglify())
         .pipe(rename('vendor.min.js'))
         .pipe(gulp.dest('build/js'))
 			.on("change", broSync.reload);
-        // .on('error', gutil.log)
-		// .pipe(gulp.dest("build/js"))
-			// .on("change", broSync.reload);
 });
 
 //инициируем сервер из папки билд и смотрим на изменеия less и html
