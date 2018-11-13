@@ -1,0 +1,23 @@
+body {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    font-size: 14px;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    color: @black-color;
+    background-color: @white-color;
+}
+.body-style-bg {
+    background-image: -webkit-linear-gradient(-70deg,#fff8e7 70%,#272b2f 30%);
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    transition: all 4s ease-in;
+}
+.animate-body-bg {
+    background-position: 0% 100%;
+    background-size: 100% 450%;
+    transition: all 4s ease-in;
+}

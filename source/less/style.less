@@ -7,20 +7,23 @@
     padding: 0;
 }
 
-body {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    font-size: 14px;
-    align-items: center;
-    justify-items: center;
-}
+@import "blocks/body.less";
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
+@import "blocks/invisible.less";
+@import "blocks/fade-in.less";
+@import "blocks/header.less";
+@import "blocks/main-header.less";
 @import "blocks/main-header-continius.less";
+@import "blocks/main-header-description.less";
 @import "blocks/content.less";
-@import "blocks/social-links-list.less";
+@import "blocks/social-links.less";
+@import "blocks/wrap-img-bg.less";
 @import "blocks/footer.less";
+@import "blocks/close.less";
+@import "blocks/animate-img.less";
+@import "blocks/media.less";
