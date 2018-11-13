@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
-    <body>
+    <body class="body-style-bg animate-body-bg">
         <div style="display: none;">
 		    <include src="build/images/sprite.svg"></include>
 	    </div>
@@ -20,54 +20,76 @@
                 <picture>
                     <source media="(min-width: 1920px)" srcset="images/logo_asalikova_large.png 1x, images/logo_asalikova_large@2x.png 2x, images/logo_asalikova_large@3x.png 3x">
 
-                    <source media="(min-width: 1024px)" srcset="images/logo_asalikova_middle.png 1x, images/logo_asalikova_middle@2x.png 2x, images/logo_asalikova_middle@3x.png 3x">
+                    <source media="(min-width: 768px)" srcset="images/logo_asalikova_middle.png 1x, images/logo_asalikova_middle@2x.png 2x, images/logo_asalikova_middle@3x.png 3x">
 
-                    <img class="header__logo" src="images/logo_asalikova_small.png" srcset="images/logo_asalikova_small@2x.png 2x, images/logo_asalikova_small@3x.png 3x" alt="логотип Саликова Анастасия">
+                    <img class="header__logo invisible" src="images/logo_asalikova_small.png" srcset="images/logo_asalikova_small@2x.png 2x, images/logo_asalikova_small@3x.png 3x" alt="логотип Саликова Анастасия">
                 </picture>
             </div>
 
         </header>
         <main class="content">
-            <h1 class="main-header">RandomNaNastya.info<span class="main-header__continius"> в процессе написания. В ближайшее время вернемся.</span></h1>
+            <h1 class="main-header invisible invisible--translateY"><a class="main-header__link" href="#">RandomNaNastya.info</a></h1>
+            <span class="main-header__continius invisible"> в процессе редизайна</span>
 
-            <p>Недавно мы переименовались с asalikova.ru на RandomNaNastya.info.
+            <p class="main-header__description invisible">Мы уже переименовались и стали умнее, осталось привести в порядок внешний вид. Скоро запустимся.
                 <!-- <span>Тематика осталась прежней: фотографии, лайфхаки по Adobe (Lightroom, Photoshop, Premiere, Affter effects) и Office (Excel, Power point). И немного об IT.
                 </span> -->
             </p>
 
-            <ul class="social-links-list">
+            <ul class="social-links-list invisible invisible--translateY">
                 <li class="social-link-item">
-                    <a class="social-link" href="#" aria-label="facebook">
-                        <svg class="social-link-svg" style="width: 16px; height: 16px">
+                    <a class="social-link facebook" href="https://www.facebook.com/anastasia.ekimova.3" target="_blank" aria-label="facebook">
+                        <svg class="social-link-svg" style="width: 14px; height: 14px">
                         	<use xlink:href="#icon-facebook-logo"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="social-link-item">
-                    <a class="social-link" href="#" aria-label="twitter">
-                        <svg class="social-link-svg" style="width: 16px; height: 16px">
+                    <a class="social-link telegram" href="https://t-do.ru/randomNaNastya" target="_blank" aria-label="telegram">
+                        <svg class="social-link-svg" style="width: 14px; height: 14px">
+                            <use xlink:href="#icon-telegram-logo"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="social-link-item">
+                    <a class="social-link twitter" href="https://twitter.com/RandomNaNastya" target="_blank" aria-label="twitter">
+                        <svg class="social-link-svg" style="width: 14px; height: 14px">
                         	<use xlink:href="#icon-twitter-logo"></use>
                         </svg>
                     </a>
                 </li>
+
                 <li class="social-link-item">
-                    <a class="social-link" href="#" aria-label="telegram">
-                        <svg class="social-link-svg" style="width: 16px; height: 16px">
-                        	<use xlink:href="#icon-telegram-logo"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-link-item">
-                    <a class="social-link" href="#" aria-label="github">
-                        <svg class="social-link-svg" style="width: 16px; height: 16px">
+                    <a class="social-link github" href="https://github.com/kassiopea" target="_blank" aria-label="github">
+                        <svg class="social-link-svg" style="width: 14px; height: 14px">
                         	<use xlink:href="#icon-github-logo"></use>
                         </svg>
                     </a>
                 </li>
             </ul>
+
+            <div class="wrap-img-bg close">
+                <div class="wrap-img-bg__white-img wrap-img-bg-item animate-img">
+                    <picture>
+                        <source media="(min-width: 1600px)" srcset="images/bg_img_header_white.png 1x, images/bg_img_header_white@2x.png 2x, images/bg_img_header_white@3x.png 3x">
+
+                        <img class="img-bg__white" src="images/bg_img_header_white_middle.png" srcset="images/bg_img_header_white_middle@2x.png 2x, images/bg_img_header_white_middle@3x.png 3x" alt="фото девушки в светлом ключе">
+                    </picture>
+                </div>
+
+                <div class="wrap-img-bg__black-img wrap-img-bg-item animate-img">
+                    <picture>
+                        <source media="(min-width: 1600px)" srcset="images/bg_img_header_black.png 1x, images/bg_img_header_black@2x.png 2x, images/bg_img_header_black@3x.png 3x">
+
+                        <img class="img-bg__black" src="images/bg_img_header_black_middle.png" srcset="images/bg_img_header_black_middle@2x.png 2x, images/bg_img_header_black_middle@3x.png 3x" alt="фото девушки в светлом ключе">
+                    </picture>
+                </div>
+            </div>
         </main>
         <footer class="footer">
-            <div class="footer__copyright">©Anastasia Salikova 2016-2018</div>
+            <div class="footer__copyright invisible">©Anastasia Salikova 2016-2018</div>
         </footer>
+        <script type="text/javascript" src="js/vendor.min.js"></script>
     </body>
 </html>
